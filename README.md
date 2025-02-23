@@ -10,6 +10,5 @@ This repository contains my personal portfolio website. Here, you will find info
 Feel free to explore and check out my work!
 
 ## Live Preview
-The portfolio is hosted on GitHub Pages and can be viewed at:
-[hanijan23.github.io](https://hanijan23.github.io/
+The portfolio is hosted on GitHub Pages and can be viewed [here](https://hanijan23.github.io/
 )
