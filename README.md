@@ -11,4 +11,5 @@ Feel free to explore and check out my work!
 
 ## Live Preview
 The portfolio is hosted on GitHub Pages and can be viewed at:
-hanijan23.github.io
+[hanijan23.github.io](https://hanijan23.github.io/
+)
