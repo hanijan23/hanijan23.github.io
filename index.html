@@ -4,9 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanijan Majuran - Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #0073e6, #00aaff);
+            color: white;
+            text-align: center;
+            padding: 3rem 1rem;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-top: 0.5rem;
+        }
+
+        /* Animated Background Effect */
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+        }
+
+        /* Main Content */
+        main {
+            width: 90%;
+            max-width: 900px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        main:hover {
+            transform: scale(1.02);
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 2.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #0073e6;
+            border-bottom: 3px solid #0073e6;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Lists */
+        ul {
+            list-style: none;
+            padding-left: 1rem;
+        }
+
+        ul li {
+            padding: 0.6rem 0;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        /* Custom Bullet Points */
+        ul li::before {
+            content: "•";
+            color: #0073e6;
+            font-size: 1.6rem;
+            margin-right: 0.7rem;
+            transition: color 0.3s ease-in-out;
+        }
+
+        ul li:hover::before {
+            color: #005bb5;
+        }
+
+        /* Links */
+        a {
+            text-decoration: none;
+            color: #0073e6;
+            font-weight: 600;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #005bb5;
+            text-decoration: underline;
+        }
+
+        /* Contact Section */
+        #contact ul li {
+            display: flex;
+            align-items: center;
+        }
+
+        /* Icons for Contact Section */
+        #contact ul li::before {
+            content: "📧";
+            font-size: 1.4rem;
+            margin-right: 0.7rem;
+        }
+
+        /* Change Icons for LinkedIn */
+        #contact ul li:nth-child(2)::before {
+            content: "🔗";
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #0073e6;
+            color: white;
+            padding: 1.2rem;
+            margin-top: 3rem;
+            font-size: 1rem;
+            font-weight: 300;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.2rem;
+            }
+
+            header p {
+                font-size: 1.1rem;
+            }
+
+            main {
+                width: 95%;
+                padding: 1.5rem;
+            }
+
+            h2 {
+                font-size: 1.7rem;
+            }
+
+            ul li {
+                font-size: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
+
     <header>
         <h1>Hanijan Majuran</h1>
         <p>Welcome to my portfolio!</p>
@@ -31,7 +208,7 @@
             <ul>
                 <li>Programming Languages: Python, Java, SQL, Shell Scripting</li>
                 <li>Web Development: HTML/CSS/JS</li>
-                <li>Frameworks & Dev Tools: Spring boot, React, NumPy, Pandas, Git</li>
+                <li>Frameworks & Dev Tools: Spring Boot, React, NumPy, Pandas, Git</li>
             </ul>
         </section>
 
@@ -40,7 +217,7 @@
             <h2>Contact</h2>
             <p>Feel free to reach out for collaborations or inquiries:</p>
             <ul>
-                <li>Email: mhanijan@gmail.com</li>
+                <li>Email: <a href="mailto:mhanijan@gmail.com">mhanijan@gmail.com</a></li>
                 <li>LinkedIn: <a href="#">LinkedIn Profile</a></li>
             </ul>
         </section>
@@ -49,5 +226,6 @@
     <footer>
         <p>&copy; 2025 Hanijan Majuran</p>
     </footer>
+
 </body>
 </html>
