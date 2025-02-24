@@ -1,14 +1,15 @@
-/* Import Google Font */
+/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Body Styling */
 body {
     background-color: #f4f4f4;
     color: #333;
@@ -17,42 +18,66 @@ body {
 
 /* Header */
 header {
-    background: linear-gradient(to right, #0073e6, #00aaff);
+    background: linear-gradient(135deg, #0073e6, #00aaff);
     color: white;
     text-align: center;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
+    position: relative;
 }
 
 header h1 {
-    font-size: 2.5rem;
-    font-weight: 600;
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 header p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    font-weight: 300;
+    margin-top: 0.5rem;
+}
+
+/* Animated Background Effect */
+header::after {
+    content: "";
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
 }
 
 /* Main Content */
 main {
     width: 90%;
-    max-width: 800px;
-    margin: 2rem auto;
-    padding: 1rem;
+    max-width: 900px;
+    margin: 3rem auto;
+    padding: 2rem;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+main:hover {
+    transform: scale(1.02);
 }
 
 /* Sections */
 section {
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 h2 {
-    border-bottom: 2px solid #0073e6;
+    font-size: 2rem;
+    color: #0073e6;
+    border-bottom: 3px solid #0073e6;
     padding-bottom: 0.5rem;
-    margin-bottom: 1rem;
-    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
 }
 
 /* Lists */
@@ -62,17 +87,24 @@ ul {
 }
 
 ul li {
-    padding: 0.5rem 0;
+    padding: 0.6rem 0;
     font-size: 1.1rem;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
+/* Custom Bullet Points */
 ul li::before {
     content: "•";
     color: #0073e6;
-    font-size: 1.5rem;
-    margin-right: 0.5rem;
+    font-size: 1.6rem;
+    margin-right: 0.7rem;
+    transition: color 0.3s ease-in-out;
+}
+
+ul li:hover::before {
+    color: #005bb5;
 }
 
 /* Links */
@@ -80,11 +112,30 @@ a {
     text-decoration: none;
     color: #0073e6;
     font-weight: 600;
-    transition: color 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
 
 a:hover {
     color: #005bb5;
+    text-decoration: underline;
+}
+
+/* Contact Section */
+#contact ul li {
+    display: flex;
+    align-items: center;
+}
+
+/* Icons for Contact Section */
+#contact ul li::before {
+    content: "📧";
+    font-size: 1.4rem;
+    margin-right: 0.7rem;
+}
+
+/* Change Icons for LinkedIn */
+#contact ul li:nth-child(2)::before {
+    content: "🔗";
 }
 
 /* Footer */
@@ -92,26 +143,29 @@ footer {
     text-align: center;
     background: #0073e6;
     color: white;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1.2rem;
+    margin-top: 3rem;
+    font-size: 1rem;
+    font-weight: 300;
 }
 
 /* Responsive Design */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
 
     header p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 
     main {
         width: 95%;
+        padding: 1.5rem;
     }
 
     h2 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
     }
 
     ul li {
