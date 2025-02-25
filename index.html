@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hanijan Majuran - Portfolio</title>
-    
+
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <style>
         /* Global Styles */
@@ -14,180 +14,126 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-            scroll-behavior: smooth;
+            font-family: 'Roboto', sans-serif;
         }
-        
+
         body {
-            background-color: #f7f8fa;
+            background-color: #f4f7f6;
             color: #333;
-            line-height: 1.6;
             font-size: 16px;
+            line-height: 1.6;
+            padding: 0 20px;
         }
-        
+
         /* Header */
         header {
-            background: linear-gradient(135deg, #0073e6, #00aaff);
+            background: #1a3d6d;
             color: white;
             text-align: center;
-            padding: 4rem 2rem;
-            position: relative;
-            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.1);
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+            padding: 4rem 0;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
         }
-        
+
         header h1 {
             font-size: 3.5rem;
             font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 3px;
         }
-        
+
         header p {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             font-weight: 300;
-            margin-top: 0.8rem;
+            margin-top: 10px;
         }
-        
-        /* Animated Background Effect */
-        header::after {
-            content: "";
-            position: absolute;
-            bottom: -20px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 90%;
-            height: 10px;
-            background: rgba(255, 255, 255, 0.4);
-            border-radius: 50%;
-        }
-        
-        /* Main Content */
-        main {
-            width: 90%;
-            max-width: 1000px;
-            margin: -3rem auto 3rem;
+
+        /* Content Bubbles */
+        .bubble {
+            background-color: white;
             padding: 3rem;
-            background: white;
+            margin: 2rem 0;
             border-radius: 15px;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
         }
-        
-        main:hover {
-            transform: scale(1.03);
-            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
+
+        .bubble:hover {
+            transform: translateY(-5px);
         }
-        
-        /* Sections */
-        section {
-            margin-bottom: 3rem;
+
+        .bubble h2 {
+            font-size: 2rem;
+            color: #1a3d6d;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #1a3d6d;
+            padding-bottom: 10px;
         }
-        
-        h2 {
-            font-size: 2.3rem;
-            color: #0073e6;
-            font-weight: 600;
-            border-bottom: 3px solid #0073e6;
-            padding-bottom: 0.8rem;
-            margin-bottom: 1.8rem;
-            text-transform: uppercase;
+
+        .bubble p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
         }
-        
-        /* Lists */
+
+        /* List Styles */
         ul {
             list-style: none;
-            padding-left: 1rem;
+            padding-left: 20px;
         }
-        
+
         ul li {
-            padding: 1rem 0;
-            font-size: 1.2rem;
-            display: flex;
-            align-items: center;
-            position: relative;
+            font-size: 1.1rem;
+            padding: 10px 0;
         }
-        
+
         ul li::before {
             content: "•";
-            color: #0073e6;
-            font-size: 1.8rem;
-            margin-right: 1rem;
-            transition: color 0.3s ease-in-out;
+            color: #1a3d6d;
+            font-size: 1.6rem;
+            margin-right: 10px;
         }
-        
-        ul li:hover::before {
-            color: #005bb5;
-        }
-        
+
         /* Links */
         a {
             text-decoration: none;
-            color: #0073e6;
-            font-weight: 600;
-            transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+            color: #1a3d6d;
+            font-weight: 500;
+            transition: color 0.3s;
         }
-        
+
         a:hover {
-            color: #005bb5;
+            color: #003b5c;
             text-decoration: underline;
         }
-        
-        /* Contact Section */
-        #contact ul li {
-            display: flex;
-            align-items: center;
-            font-size: 1.1rem;
-        }
-        
-        #contact ul li::before {
-            content: "📧";
-            font-size: 1.6rem;
-            margin-right: 1rem;
-        }
-        
-        #contact ul li:nth-child(2)::before {
-            content: "🔗";
-        }
-        
+
         /* Footer */
         footer {
             text-align: center;
-            background: #0073e6;
+            background: #1a3d6d;
             color: white;
             padding: 1.2rem;
-            margin-top: 5rem;
-            font-size: 1rem;
-            font-weight: 300;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
+            margin-top: 50px;
+            border-radius: 10px;
         }
-        
+
         /* Responsive Design */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 2.5rem;
             }
-        
-            header p {
-                font-size: 1.2rem;
-            }
-        
-            main {
-                width: 95%;
+
+            .bubble {
                 padding: 2rem;
             }
-        
-            h2 {
+
+            .bubble h2 {
                 font-size: 1.8rem;
             }
-        
+
             ul li {
                 font-size: 1rem;
             }
-        
+
             footer {
                 font-size: 0.9rem;
             }
@@ -201,39 +147,37 @@
         <p>Welcome to my portfolio!</p>
     </header>
 
-    <main>
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2>Projects</h2>
-            <p>Here are some of the projects I’ve worked on:</p>
-            <ul>
-                <li><a href="#">Java Banking System</a></li>
-                <li><a href="#">Website Development</a></li>
-                <li><a href="#">Market Management System</a></li>
-            </ul>
-        </section>
+    <!-- Projects Section -->
+    <div class="bubble">
+        <h2>Projects</h2>
+        <p>Here are some of the projects I’ve worked on:</p>
+        <ul>
+            <li><a href="#">Java Banking System</a></li>
+            <li><a href="#">Website Development</a></li>
+            <li><a href="#">Market Management System</a></li>
+        </ul>
+    </div>
 
-        <!-- Technical Skills Section -->
-        <section id="skills">
-            <h2>Technical Skills</h2>
-            <p>I am familiar with the following technologies:</p>
-            <ul>
-                <li>Programming Languages: Python, Java, SQL, Shell Scripting</li>
-                <li>Web Development: HTML/CSS/JS</li>
-                <li>Frameworks & Dev Tools: Spring Boot, React, NumPy, Pandas, Git</li>
-            </ul>
-        </section>
+    <!-- Technical Skills Section -->
+    <div class="bubble">
+        <h2>Technical Skills</h2>
+        <p>I am proficient in the following technologies:</p>
+        <ul>
+            <li>Programming Languages: Python, Java, SQL, Shell Scripting</li>
+            <li>Web Development: HTML/CSS/JS</li>
+            <li>Frameworks & Dev Tools: Spring Boot, React, NumPy, Pandas, Git</li>
+        </ul>
+    </div>
 
-        <!-- Contact Section -->
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Feel free to reach out for collaborations or inquiries:</p>
-            <ul>
-                <li>Email: <a href="mailto:mhanijan@gmail.com">mhanijan@gmail.com</a></li>
-                <li>LinkedIn: <a href="#">LinkedIn Profile</a></li>
-            </ul>
-        </section>
-    </main>
+    <!-- Contact Section -->
+    <div class="bubble">
+        <h2>Contact</h2>
+        <p>Feel free to reach out for collaborations or inquiries:</p>
+        <ul>
+            <li>Email: <a href="mailto:mhanijan@gmail.com">mhanijan@gmail.com</a></li>
+            <li>LinkedIn: <a href="#">LinkedIn Profile</a></li>
+        </ul>
+    </div>
 
     <footer>
         <p>&copy; 2025 Hanijan Majuran</p>
